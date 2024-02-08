@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="ludo.css">
+</head>
+
+<body>
+    <div id="game" class="game">
+    </div>
+
+    <script>
+        addBoard();
+
+        function addBoard() {
+            addColor('box', 'house green', 'green', '');
+            addColor('box', 'house yellow', 'yellow', 'right: 0');
+            addColor('box', 'house red', 'red', 'bottom: 0');
+            addColor('box', 'house blue', 'blue', 'bottom: 0;right: 0');
+            addCell1();
+            addCell2();
+            addCell3();
+            addCell4();
+            addCell5();
+            addCell6();
+            addCell7();
+            addCell8();
+            addCell9();
+            addCell10();
+            addCell11();
+            addCell12();
+        }
+
+
+
+        
+
+        function addColor(text1, text2, color, pos) {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="${text2}" style="${pos}">
+                <div class="${text1}">
+                    <div class="square square-one ${color}"></div>
+                    <div class="square square-two ${color}"></div>
+                    <div class="square square-three ${color}"></div>
+                    <div class="square square-four ${color}"></div>
+                </div>
+            </div>
+            `;
+        }
+
+        function addCell1() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="home"></div>
+            <div class="cells" style="top: 40%;"></div>
+            <div class="cells g-start" style="top: 40%;left:6.66%;"></div>
+            <div class="cells" style="top: 40%;left:13.32%;"></div>
+            <div class="cells" style="top: 40%;left:19.98%;"></div>
+            <div class="cells" style="top: 40%;left:26.64%;"></div>
+            <div class="cells" style="top: 40%;left:33.3%;"></div>
+            `;
+        }
+
+        function addCell2() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 0;left:40%;"></div>
+            <div class="cells" style="top: 6.66%;left:40%;"></div>
+            <div class="cells safe" style="top: 13.32%;left:40%;"></div>
+            <div class="cells" style="top: 19.98%;left:40%;"></div>
+            <div class="cells" style="top: 26.64%;left:40%;"></div>
+            <div class="cells" style="top: 33.3%;left:40%;"></div>
+            `;
+        }
+        
+        function addCell3() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 0;left:46.66%;"></div>
+            <div class="cells yellow" style="top: 6.66%;left:46.66%;"></div>
+            <div class="cells yellow" style="top: 13.32%;left:46.66%;"></div>
+            <div class="cells yellow" style="top: 19.98%;left:46.66%;"></div>
+            <div class="cells yellow" style="top: 26.64%;left:46.66%;"></div>
+            <div class="cells yellow" style="top: 33.3%;left:46.66%;"></div>
+            `;
+        }
+        
+        function addCell4() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 0;left:53.32%;"></div>
+            <div class="cells y-start" style="top: 6.66%;left:53.32%;"></div>
+            <div class="cells" style="top: 13.32%;left:53.32%;"></div>
+            <div class="cells" style="top: 19.98%;left:53.32%;"></div>
+            <div class="cells" style="top: 26.64%;left:53.32%;"></div>
+            <div class="cells" style="top: 33.3%;left:53.32%;"></div>
+            `;
+        }
+        
+        function addCell5() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 40%; right: 33.3%"></div>
+            <div class="cells" style="top: 40%;right:26.64%;"></div>
+            <div class="cells" style="top: 40%;right:19.98%;"></div>
+            <div class="cells safe" style="top: 40%;right:13.32%;"></div>
+            <div class="cells" style="top: 40%;right:6.66%;"></div>
+            <div class="cells" style="top: 40%;right:0;"></div>
+            `;
+        }
+        
+        function addCell6() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells blue" style="top: 46.66%; right: 33.3%"></div>
+            <div class="cells blue" style="top: 46.66%;right:26.64%;"></div>
+            <div class="cells blue" style="top: 46.66%;right:19.98%;"></div>
+            <div class="cells blue" style="top: 46.66%;right:13.32%;"></div>
+            <div class="cells blue" style="top: 46.66%;right:6.66%;"></div>
+            <div class="cells" style="top: 46.66%;right:0;"></div>
+            `;
+        }
+        
+        function addCell7() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 53.32%; right: 33.3%"></div>
+            <div class="cells" style="top: 53.32%;right:26.64%;"></div>
+            <div class="cells" style="top: 53.32%;right:19.98%;"></div>
+            <div class="cells" style="top: 53.32%;right:13.32%;"></div>
+            <div class="cells b-start" style="top: 53.32%;right:6.66%;"></div>
+            <div class="cells" style="top: 53.32%;right:0;"></div>
+            `;
+        }
+        
+        function addCell8() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="bottom: 0;left:53.32%;"></div>
+            <div class="cells" style="bottom: 6.66%;left:53.32%;"></div>
+            <div class="cells safe" style="bottom: 13.32%;left:53.32%;"></div>
+            <div class="cells" style="bottom: 19.98%;left:53.32%;"></div>
+            <div class="cells" style="bottom: 26.64%;left:53.32%;"></div>
+            <div class="cells" style="bottom: 33.3%;left:53.32%;"></div>
+            `;
+        }
+        
+        function addCell9() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="bottom: 0;left:46.66%;"></div>
+            <div class="cells red " style="bottom: 6.66%;left:46.66%;"></div>
+            <div class="cells red" style="bottom: 13.32%;left:46.66%;"></div>
+            <div class="cells red" style="bottom: 19.98%;left:46.66%;"></div>
+            <div class="cells red" style="bottom: 26.64%;left:46.66%;"></div>
+            <div class="cells red" style="bottom: 33.3%;left:46.66%;"></div>
+            `;
+        }
+        
+        function addCell10() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="bottom: 0;left:40%;"></div>
+            <div class="cells r-start" style="bottom: 6.66%;left:40%;"></div>
+            <div class="cells" style="bottom: 13.32%;left:40%;"></div>
+            <div class="cells" style="bottom: 19.98%;left:40%;"></div>
+            <div class="cells" style="bottom: 26.64%;left:40%;"></div>
+            <div class="cells" style="bottom: 33.3%;left:40%;"></div>
+            `;
+        }
+        
+        function addCell11() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells" style="top: 53.32%; left: 33.3%"></div>
+            <div class="cells" style="top: 53.32%;left:26.64%;"></div>
+            <div class="cells" style="top: 53.32%;left:19.98%;"></div>
+            <div class="cells safe" style="top: 53.32%;left:13.32%;"></div>
+            <div class="cells" style="top: 53.32%;left:6.66%;"></div>
+            <div class="cells" style="top: 53.32%;left:0;"></div>
+            `;
+        }
+        
+        function addCell12() {
+            document.getElementById('game').innerHTML += /*HTML*/`
+            <div class="cells green" style="top: 46.66%;left: 33.3%"></div>
+            <div class="cells green" style="top: 46.66%;left:26.64%;"></div>
+            <div class="cells green" style="top: 46.66%;left:19.98%;"></div>
+            <div class="cells green" style="top: 46.66%;left:13.32%;"></div>
+            <div class="cells green" style="top: 46.66%;left:6.66%;"></div>
+            <div class="cells" style="top: 46.66%;left:0;"></div>
+            `;
+        }
+
+        
+
+        // console.log('testing');
+
+    </script>
+</body>
+
+</html>
